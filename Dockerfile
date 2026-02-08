@@ -1,4 +1,4 @@
-FROM nginx:alpine AS base
+FROM nginx:1.29.5-alpine3.23 AS base
 RUN rm -rf /usr/share/nginx/html/*
 COPY ./start.sh start.sh
 COPY ./nginx/nginx.conf.template /etc/nginx/conf.d/nginx.conf.template
